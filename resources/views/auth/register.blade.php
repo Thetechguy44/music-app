@@ -44,7 +44,7 @@
                                     @enderror
                                 </div>
                                 <div class="mb-24">
-                                    <input type="password" name="password" class="form-control @error('password_confirmation') is-invalid @enderror" name="password_confirmation" required autocomplete="new-password" placeholder="Confirm password">
+                                    <input type="password" name="password_confirmation" class="form-control @error('password_confirmation') is-invalid @enderror" required autocomplete="new-password" placeholder="Confirm password">
 
                                     @error('password_confirmation')
                                         <span class="invalid-feedback" role="alert">
@@ -55,9 +55,9 @@
 
                                 <h6 class="mb-4p text-start">What’s your gender?</h6> 
                                 <div class="gender mb-24">
-                                    <label for="male"><input id="male" type="radio" name="radio" class="radio" value="male">Male</label>
-                                    <label for="female"><input id="female" type="radio" name="radio" class="radio" value="female">Female</label>
-                                    <label for="other"><input id="other" type="radio" name="radio" class="radio" value="other">Prefer not to say</label>
+                                    <label for="male"><input id="male" type="radio" name="gender" class="radio" value="male">Male</label>
+                                    <label for="female"><input id="female" type="radio" name="gender" class="radio" value="female">Female</label>
+                                    <label for="other"><input id="other" type="radio" name="gender" class="radio" value="other">Prefer not to say</label>
                                 </div>
                                 <div class="text-center">
                                     <button class="cus-btn dark mb-32 w-100" type="submit">Sign up</button>
