@@ -53,4 +53,15 @@ class User extends Authenticatable
     {
         return $this->hasOne(Artist::class);
     }
+
+    protected function role($value)
+    {
+        $enumValues = ['admin', 'artist', 'user'];
+
+        if (array_key_exists($value, $enumValues)) {
+            return $enumValues[$value];
+        }
+        
+        abort(401);
+    }
 }
