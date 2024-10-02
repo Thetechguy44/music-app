@@ -16,11 +16,13 @@ class UserRole
      */
     public function handle(Request $request, Closure $next, $role): Response
     {
-        if(Auth::check() && Auth::user()->role == $role)
-        {
+        // Support multiple roles by checking if the user’s role is in a list of roles
+        if(Auth::check() && (in_array(Auth::user()->role, explode('|', $role)))) {
             return $next($request);
         }
-        
-        abort(401);
+    
+        // You can also redirect to an unauthorized page or return a more user-friendly response
+        abort(403, 'Unauthorized');
     }
+    
 }
