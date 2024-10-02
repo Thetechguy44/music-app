@@ -47,19 +47,20 @@ class LoginController extends Controller
             'password'=>'required'
         ]);
 
-        if(auth()->attempt(['email'=>$input["email"], 'password'=>$input["password"]]))
+        if(auth()->attempt(['email' => $input["email"], 'password' => $input["password"]]))
         {
-            if(auth()->user()->role == "admin" || "artist")
+            if(auth()->user()->role == "admin" || auth()->user()->role == "artist")
             {
-                return redirect()->route('dashboard');
+                return redirect()->route('dashboard.home');
             } 
             else if(auth()->user()->role == "user")
             {
                 return redirect()->route('home');
             }
         }
-        else{
+        else
+        {
             return redirect()->route("login")->with("error", 'Incorrect email or password');
-        }
+        }  
     }
 }
