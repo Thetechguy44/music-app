@@ -1639,11 +1639,6 @@
                                         </button>
                                         <input type="text" placeholder="Search Here...">
                                      </div>
-                                     <div class="flex-shrink-0 search-box-btn">
-                                        <a class="btn  text-capitalize">
-                                           clt + k
-                                        </a>
-                                     </div>
                                   </div>
                                </div>
                                <ul class="p-0 sub-drop dropdown-menu dropdown-menu-end" aria-labelledby="search-drop">
@@ -1657,36 +1652,6 @@
                                            <div class="d-flex flex-column ms-3 w-100">
                                               <a href="javascript:void(0);" class="h5">Paige Turner</a>
                                               <span>Paige001</span>
-                                           </div>
-                                        </div>
-                                        <div class="d-flex align-items-center border-bottom search-hover py-2 px-3">
-                                           <div class="flex-shrink-0">
-                                              <img src="https://templates.iqonic.design/muzik/html/assets/images/dashboard/02.png"
-                                                 class="align-self-center img-fluid avatar-50 rounded-pill" alt="#">
-                                           </div>
-                                           <div class="d-flex flex-column ms-3 w-100">
-                                              <a href="javascript:void(0);" class="h5">Monty Carlo</a>
-                                              <span>Carlo.m</span>
-                                           </div>
-                                        </div>
-                                        <div class="d-flex align-items-center search-hover py-2 px-3 border-bottom">
-                                           <div class="flex-shrink-0">
-                                              <img src="https://templates.iqonic.design/muzik/html/assets/images/dashboard/03.png"
-                                                 class="align-self-center img-fluid avatar-50 rounded-pill" alt="#">
-                                           </div>
-                                           <div class="d-flex flex-column ms-3 w-100">
-                                              <a href="javascript:void(0);" class="h5">Paul Molive</a>
-                                              <span>Paul.45</span>
-                                           </div>
-                                        </div>
-                                        <div class="d-flex align-items-center border-bottom search-hover py-2 px-3">
-                                           <div class="flex-shrink-0">
-                                              <img src="https://templates.iqonic.design/muzik/html/assets/images/dashboard/04.png"
-                                                 class="align-self-center img-fluid avatar-50 rounded-pill" alt="#">
-                                           </div>
-                                           <div class="d-flex flex-column ms-3 w-100">
-                                              <a href="javascript:void(0);" class="h5">Monty Carlo</a>
-                                              <span>Carlo.m</span>
                                            </div>
                                         </div>
                                      </div>
@@ -1731,52 +1696,9 @@
                                               <span>Muzic Player</span>
                                            </div>
                                         </div>
-                                        <div class="d-flex align-items-center border-bottom search-hover py-2 px-3">
-                                           <div class="flex-shrink-0">
-                                              <img src="https://templates.iqonic.design/muzik/html/assets/images/dashboard/55.png"
-                                                 class="align-self-center img-fluid avatar-50 rounded-pill" alt="#">
-                                           </div>
-                                           <div class="d-flex flex-column ms-3 w-100">
-                                              <a href="javascript:void(0);" class="h6">Karuna Trusaa</a>
-                                              <span>Singer</span>
-                                           </div>
-                                        </div>
-                                        <div class="d-flex align-items-center search-hover py-2 px-3 border-bottom">
-                                           <div class="flex-shrink-0">
-                                              <img src="https://templates.iqonic.design/muzik/html/assets/images/dashboard/56.png"
-                                                 class="align-self-center img-fluid avatar-50 rounded-pill" alt="#">
-                                           </div>
-                                           <div class="d-flex flex-column ms-3 w-100">
-                                              <a href="javascript:void(0);" class="h6">Vibrato Ecruct</a>
-                                              <span>Playback</span>
-                                           </div>
-                                        </div>
-                                        <div class="d-flex align-items-center border-bottom search-hover py-2 px-3">
-                                           <div class="flex-shrink-0">
-                                              <img src="https://templates.iqonic.design/muzik/html/assets/images/dashboard/57.png"
-                                                 class="align-self-center img-fluid avatar-50 rounded-pill" alt="#">
-                                           </div>
-                                           <div class="d-flex flex-column ms-3 w-100">
-                                              <a href="javascript:void(0);" class="h6">Omen Smith</a>
-                                              <span>Singer</span>
-                                           </div>
-                                        </div>
                                      </div>
                                   </li>
                                </ul>
-                            </li>
-                            <li>
-                               <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none">
-                                  <g clip-path="url(#clip0_549_1300)">
-                                     <path d="M10 13.125C11.7259 13.125 13.125 11.7259 13.125 10C13.125 8.27411 11.7259 6.875 10 6.875C8.27411 6.875 6.875 8.27411 6.875 10C6.875 11.7259 8.27411 13.125 10 13.125Z" stroke="#AAAAAA" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-                                     <path d="M10.1601 16.1023C10.0555 16.1023 9.94999 16.1023 9.84765 16.1023L7.34374 17.5C6.36899 17.1721 5.46489 16.6632 4.6789 16L4.66952 13.1875C4.61405 13.1 4.56171 13.0117 4.51327 12.9211L2.02343 11.5031C1.82731 10.5112 1.82731 9.4904 2.02343 8.49844L4.51093 7.08438C4.56171 6.99453 4.61405 6.90547 4.66718 6.81797L4.67968 4.00547C5.46496 3.34035 6.36883 2.82957 7.34374 2.5L9.84374 3.89766C9.94843 3.89766 10.0539 3.89766 10.1562 3.89766L12.6562 2.5C13.631 2.82788 14.5351 3.33679 15.3211 4L15.3305 6.8125C15.3859 6.9 15.4383 6.98828 15.4867 7.07891L17.975 8.49609C18.1711 9.48806 18.1711 10.5088 17.975 11.5008L15.4875 12.9148C15.4367 13.0047 15.3844 13.0938 15.3312 13.1813L15.3187 15.9938C14.534 16.659 13.6307 17.17 12.6562 17.5L10.1601 16.1023Z" stroke="#AAAAAA" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-                                  </g>
-                                  <defs>
-                                     <clipPath id="clip0_549_1300">
-                                        <rect width="20" height="20" fill="white"/>
-                                     </clipPath>
-                                  </defs>
-                               </svg>
                             </li>
                             <li class="nav-item dropdown">
                                <a href="#" class="nav-link p-0 ps-3" id="notification-drop" data-bs-toggle="dropdown">
@@ -1815,47 +1737,6 @@
                                               </div>
                                            </div>
                                         </a>
-                                        <a href="#" class="iq-sub-card">
-                                           <div class="d-flex align-items-center">
-                                              <div>
-                                                 <img class="p-1 avatar-40 rounded-pill bg-soft-primary"
-                                                    src="https://templates.iqonic.design/muzik/html/assets/images/dashboard/25.png" alt="" loading="lazy">
-                                              </div>
-                                              <div class="ms-3 w-100">
-                                                 <h6 class="mb-0 ">New customer is join</h6>
-                                                 <div class="d-flex justify-content-between align-items-center">
-                                                    <p class="mb-0">Cyst Bni</p>
-                                                    <small class="float-end font-size-12">5 days ago</small>
-                                                 </div>
-                                              </div>
-                                           </div>
-                                        </a>
-                                        <a href="#" class="iq-sub-card">
-                                           <div class="d-flex align-items-center">
-                                              <img class="p-1 avatar-40 rounded-pill bg-soft-primary"
-                                                 src="https://templates.iqonic.design/muzik/html/assets/images/dashboard/26.png" alt="" loading="lazy">
-                                              <div class="ms-3 w-100">
-                                                 <h6 class="mb-0 ">Two customer is left</h6>
-                                                 <div class="d-flex justify-content-between align-items-center">
-                                                    <p class="mb-0">Cyst Bni</p>
-                                                    <small class="float-end font-size-12">2 days ago</small>
-                                                 </div>
-                                              </div>
-                                           </div>
-                                        </a>
-                                        <a href="#" class="iq-sub-card">
-                                           <div class="d-flex align-items-center">
-                                              <img class="p-1 avatar-40 rounded-pill bg-soft-primary"
-                                                 src="https://templates.iqonic.design/muzik/html/assets/images/dashboard/27.png" alt="" loading="lazy">
-                                              <div class="w-100 ms-3">
-                                                 <h6 class="mb-0 ">New Mail from Fenny</h6>
-                                                 <div class="d-flex justify-content-between align-items-center">
-                                                    <p class="mb-0">Cyst Bni</p>
-                                                    <small class="float-end font-size-12">3 days ago</small>
-                                                 </div>
-                                              </div>
-                                           </div>
-                                        </a>
                                      </div>
                                   </li>
                                </ul>
@@ -1868,7 +1749,7 @@
                                      <div class="iq-profile-badge  bg-success"></div
                                </a>
                                <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="profile-setting">
-                                  <li><a class="dropdown-item" href="app/user-profile.html">Profile</a></li>
+                                  <li><a class="dropdown-item" href="{{ url('/dashboard/profile') }}">Profile</a></li>
                                   <li><a class="dropdown-item" href="app/user-privacy-setting.html">Privacy
                                         Setting</a></li>
                                   <li>
@@ -1885,7 +1766,8 @@
                          </ul>
                       </div>
                    </div>
-                </nav>            <!--Nav End-->
+                </nav>            
+            <!--Nav End-->
             </div>
             @yield('content')
         </main>
