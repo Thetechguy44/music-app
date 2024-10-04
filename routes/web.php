@@ -16,4 +16,5 @@ Route::middleware(['auth', 'user_role:user'])->group(function () {
 
 Route::prefix('dashboard')->name('dashboard.')->middleware(['auth','user_role:admin|artist'])->group(function(){
     Route::get('/home', [App\Http\Controllers\Backend\HomeController::class, 'index'])->name('home');
+    Route::get('/profile', [App\Http\Controllers\Backend\HomeController::class, 'profile'])->name('profile');
 });
