@@ -27,7 +27,7 @@
         
         gtag('config', 'UA-266165434-1');
         </script>
-
+        @livewireStyles
     </head>
 
     <body>
@@ -375,5 +375,6 @@
                 });
         
             </script>
+            @livewireScripts
     </body>
 </html>
