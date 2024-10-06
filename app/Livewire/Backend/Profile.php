@@ -10,13 +10,25 @@ class Profile extends Component
     public $tab = null;
     public $tabname = 'profile_profile';
     protected $queryString = ['tab'];
-    public $id, $name, $bio, $email, $artist_name, $image, $phone, $dob, $gender, $address, $created_on;
+    public $id, $name, $bio, $email, $artist_name, $image, $phone, $dob, $genderOptions, $selectedGender, $address, $created_on;
 
     public function selectTab($tab)
     {
         $this->tab = $tab;
     }
 
+    // Form validation rules
+    protected $rules = [
+        'name' => 'required|string|max:255',
+        'email' => 'required|email|max:255',
+        'bio' => 'nullable|string',
+        'artist_name' => 'nullable|string|max:255',
+        'phone' => 'nullable|string|max:20',
+        'dob' => 'nullable|date',
+        'selectedGender' => 'nullable|string|max:10',
+        'address' => 'nullable|string|max:255',
+    ];
+    
     public function mount()
     {
         $this->tab = request()->tab ? request()->tab : $this->tabname;
@@ -29,9 +41,10 @@ class Profile extends Component
         $this->email = $profile->email;
         $this->phone = $profile->phone;
         $this->dob = $profile->dob;
-        $this->gender = $profile->gender;
+        $this->genderOptions = ['male', 'female', 'other'];
+        $this->selectedGender = $profile->gender;
         $this->address = $profile->address;
-        $this->created_on = $profile->created_on;
+        $this->created_on = $profile->created_at;
 
         // Check if the artist relationship exists
         if ($profile->artist) {
@@ -51,5 +64,31 @@ class Profile extends Component
         return view('livewire.backend.profile');
     }
 
-    
+    public function update()
+    {
+        // Validate the data
+        $validatedData = $this->validate();
+
+        // Get the authenticated user
+        $user = Auth::user();
+
+        // Update the user's profile
+        $user->name = $this->name;
+        $user->email = $this->email;
+        $user->phone = $this->phone;
+        $user->dob = $this->dob;
+        $user->gender = $this->selectedGender;
+        $user->address = $this->address;
+        $user->save(); // Save the changes to the user table
+
+        // Check if the user has an artist profile and update it
+        if ($user->artist) {
+            $user->artist->bio = $this->bio;
+            $user->artist->artist_name = $this->artist_name;
+            $user->artist->save(); // Save the changes to the artist table
+        }
+
+        // Optionally show a success message
+        session()->flash('message', 'Profile updated successfully!');
+    }
 }
