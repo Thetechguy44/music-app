@@ -9,6 +9,7 @@ class Profile extends Component
     public $tab = null;
     public $tabname = 'profile_profile';
     protected $queryString = ['tab'];
+    public $id, $name, $bio, $email, $artist_name, $image, $phone, $dob, $gender, $address, $created_on;
 
     public function selectTab($tab)
     {

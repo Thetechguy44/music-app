@@ -9,8 +9,8 @@
                                 <img src="https://templates.iqonic.design/muzik/html/assets/images/dashboard/64.jpg" alt="User-Profile" class="theme-color-default-img img-fluid rounded-pill avatar-100" loading="lazy">
                             </div>
                             <div class="d-flex flex-wrap align-items-center mb-3 mb-sm-0">
-                                <h4 class="me-2 h4">Austin Robertson</h4>
-                                <span> - Web Developer</span>
+                                <h4 class="me-2 h4">{{$name}}</h4>
+                                <span> {{$artist_name}}</span>
                             </div>
                         </div>
                         <ul class="d-flex nav nav-pills mb-0 text-center profile-tab nav-slider" data-toggle="slider-tab" id="profile-pills-tab" role="tablist">
@@ -42,9 +42,9 @@
                             <img src="https://templates.iqonic.design/muzik/html/assets/images/dashboard/writer-5.png" alt="profile-img" class="rounded-pill avatar-130 img-fluid" loading="lazy">
                          </div>
                          <div class="mt-3">
-                            <h3 class="d-inline-block">Austin Robertson</h3>
-                            <p class="d-inline-block pl-3"> - Web developer</p>
-                            <p class="mb-0">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s</p>
+                            <h3 class="d-inline-block">{{$name}}</h3>
+                            <p class="d-inline-block pl-3"> {{$artist_name}}</p>
+                            <p class="mb-0">{{$bio}}</p>
                          </div>
                       </div>
                    </div>
@@ -57,19 +57,19 @@
                    </div>
                    <div class="card-body">
                       <div class="user-bio">
-                         <p>Tart I love sugar plum I love oat cake. Sweet roll caramels I love jujubes. Topping cake wafer.</p>
+                         <p>{{$bio}}</p>
                       </div>
                       <div class="mt-2">
                       <h6 class="mb-1">Joined:</h6>
-                      <p>Feb 15, 2021</p>
+                      <p>{{$created_on}}</p>
                       </div>
                       <div class="mt-2">
                       <h6 class="mb-1">Lives:</h6>
-                      <p>United States of America</p>
+                      <p>{{$address}}</p>
                       </div>
                       <div class="mt-2">
                       <h6 class="mb-1">Email:</h6>
-                      <p><a href="#" class="text-body"> austin@gmail.com</a></p>
+                      <p><a href="#" class="text-body"> {{$email}}</a></p>
                       </div>
                       <div class="mt-2">
                       <h6 class="mb-1">Url:</h6>
@@ -77,7 +77,7 @@
                       </div>
                       <div class="mt-2">
                       <h6 class="mb-1">Contact:</h6>
-                      <p><a href="#" class="text-body">(001) 4544 565 456</a></p>
+                      <p><a href="#" class="text-body">{{$phone}}</a></p>
                       </div>
                    </div>
                 </div>
