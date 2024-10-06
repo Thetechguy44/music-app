@@ -3,9 +3,9 @@
 namespace Database\Seeders;
 
 use App\Models\User;
+use App\Models\Artist;
 use Illuminate\Database\Seeder;
 use Illuminate\Support\Facades\Hash;
-use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 
 class UserSeeder extends Seeder
 {
@@ -18,36 +18,42 @@ class UserSeeder extends Seeder
             [
                 'name' => 'Admin User',
                 'email' => 'admin@example.com',
-                'password' => Hash::make(12345678),
+                'password' => Hash::make('12345678'),
                 'gender' => 'male',
                 'role' => 'admin',
             ],
             [
                 'name' => 'Artist User',
                 'email' => 'artist@example.com',
-                'password' => Hash::make(12345678),
+                'password' => Hash::make('12345678'),
                 'gender' => 'male',
                 'role' => 'artist',
             ],
             [
                 'name' => 'Fan Worker',
                 'email' => 'fans@example.com',
-                'password' => Hash::make(12345678),
+                'password' => Hash::make('12345678'),
                 'gender' => 'male',
-                'role' => 'user', // Health provider role
+                'role' => 'user',
             ],
-            
         ];
 
         foreach ($users as $userData) {
             // Create a user record
-            User::create([
+            $user = User::create([
                 'name' => $userData['name'],
                 'email' => $userData['email'],
                 'password' => $userData['password'],
                 'gender' => $userData['gender'],
                 'role' => $userData['role'],
             ]);
+
+            // If the role is artist, store user's ID in the artist table
+            if ($userData['role'] === 'artist') {
+                Artist::create([
+                    'user_id' => $user->id, // Store the user's ID in the artist table
+                ]);
+            }
         }
     }
 }
