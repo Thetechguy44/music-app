@@ -90,41 +90,87 @@
                         </div>
                     </div>
                     <div class="card-body">
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi vulputate, ex ac venenatis mollis, diam nibh finibus leo</p>
-                        <form>
+                        <p>Update Profile</p>
+                        <form wire:submit.prevent="update()">
+                            @if (session()->has('message'))
+                                <div class="alert alert-success">
+                                    {{session('message')}}
+                                </div>
+                            @endif
                             <div class="row">
                                 <div class="col-md-6 mb-3">
                                     <label class="form-label" for="validationDefault01">Name</label>
-                                    <input type="text" class="form-control" id="validationDefault01" required="">
+                                    <input type="text" class="form-control" id="validationDefault01" wire:model="name" required>
+                                    @error('name')
+                                        <span class="alert text-danger" role="alert">
+                                            <strong>{{ $message }}</strong>
+                                        </span>
+                                    @enderror
                                 </div>
                                 <div class="col-md-6 mb-3">
                                     <label for="validationCustomUsername" class="form-label">Email</label>
                                     <div class="form-group input-group">
                                         <span class="input-group-text" id="basic-addon1">@</span>
-                                        <input type="email" class="form-control" id="validationCustomUsername" aria-label="Email" aria-describedby="basic-addon1" required="">
+                                        <input type="email" class="form-control" id="validationCustomUsername" aria-label="Email" aria-describedby="basic-addon1" wire:model="email" required>
+                                        @error('email')
+                                            <span class="alert text-danger" role="alert">
+                                                <strong>{{ $message }}</strong>
+                                            </span>
+                                        @enderror
                                     </div>
                                 </div>
                                 <div class="col-md-6 mb-3">
                                     <label for="validationCustomUsername" class="form-label">Artist Name</label>
                                     <div class="form-group input-group">
                                         <span class="input-group-text" id="basic-addon1">@</span>
-                                        <input type="text" class="form-control" id="validationCustomUsername" aria-label="Username" aria-describedby="basic-addon1" required="">
+                                        <input type="text" class="form-control" id="validationCustomUsername" aria-label="Username" aria-describedby="basic-addon1" wire:model="artist_name">
+                                        @error('artist_name')
+                                            <span class="alert text-danger" role="alert">
+                                                <strong>{{ $message }}</strong>
+                                            </span>
+                                        @enderror
                                     </div>
                                 </div>
                                 <div class="col-md-6 mb-3">
                                     <label class="form-label" for="validationDefault03">Phone</label>
-                                    <input type="text" class="form-control" id="validationDefault03" required="">
+                                    <input type="text" class="form-control" id="validationDefault03" wire:model="phone">
+                                    @error('phone')
+                                        <span class="alert text-danger" role="alert">
+                                            <strong>{{ $message }}</strong>
+                                        </span>
+                                    @enderror
                                 </div>
+                                <div class="col-md-12 mb-3">
+                                    <label for="validationTextarea" class="form-label">Bio</label>
+                                    <textarea class="form-control" id="validationTextarea" placeholder="Write a short bio about yourself" wire:model="bio">{{$bio}}</textarea>
+                                    @error('phone')
+                                        <div class="invalid-feedback">
+                                            {{ $message }}
+                                        </div>
+                                    @enderror
+                                 </div>
                                 <div class="col-md-6 mb-3">
                                     <label class="form-label" for="validationDefault04">Gender</label>
-                                    <select class="form-select" id="validationDefault04" required="">
-                                        <option selected="" disabled="" value="">Choose...</option>
-                                        <option>...</option>
+                                    <select class="form-select" id="validationDefault04" wire:model="selectedGender">
+                                        <option selected>-- select --</option>
+                                        @foreach ($genderOptions as $option)
+                                            <option value="{{ $option }}">{{ ucfirst($option) }}</option>
+                                        @endforeach
                                     </select>
+                                    @error('selectedGender')
+                                        <span class="alert text-danger" role="alert">
+                                            <strong>{{ $message }}</strong>
+                                        </span>
+                                    @enderror
                                 </div>
                                 <div class="col-md-6 mb-3">
                                     <label class="form-label" for="validationDefault05">Date of Birth</label>
-                                    <input type="text" class="form-control" id="validationDefault05" required="">
+                                    <input type="date" class="form-control" id="validationDefault05" wire:model="dob">
+                                    @error('selectedGender')
+                                        <span class="alert text-danger" role="alert">
+                                            <strong>{{ $message }}</strong>
+                                        </span>
+                                    @enderror
                                 </div>
                             </div>
                             <div>
