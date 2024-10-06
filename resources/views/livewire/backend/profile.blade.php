@@ -18,7 +18,7 @@
                                 <a class="nav-link {{ $tab == 'profile_profile' ? 'active' : '' }}" data-bs-toggle="tab" wire:click.prevent='selectTab("profile_profile")' href="#profile_profile" role="tab" aria-selected="false" tabindex="-1">Profile</a>
                             </li>
                             <li class="nav-item" role="presentation">
-                                <a class="nav-link {{ $tab == 'profile_settings' ? 'active' : '' }}" data-bs-toggle="tab" wire:click.prevent='selectTab("profile_settings")' href="#profile_settings" role="tab" aria-selected="false" tabindex="-1">Friends</a>
+                                <a class="nav-link {{ $tab == 'profile_settings' ? 'active' : '' }}" data-bs-toggle="tab" wire:click.prevent='selectTab("profile_settings")' href="#profile_settings" role="tab" aria-selected="false" tabindex="-1">Edit Profile</a>
                             </li>
                             <div class="nav-slider-thumb position-absolute nav-link" aria-selected="false" tabindex="-1" role="tab" style="padding: 0px; width: 71px; height: 37px; transform: translate3d(0px, 0px, 0px); transition: 300ms ease-in-out;"><a class="nav-link active show" data-bs-toggle="tab" href="#profile-feed" role="tab" aria-selected="true"></a>
                             </div>
@@ -84,31 +84,54 @@
              </div>
              <div id="profile_settings" class="tab-pane fade {{ $tab == 'profile_settings' ? 'active show' : '' }}" role="tabpanel">
                 <div class="card">
-                   <div class="card-header">
-                      <div class="header-title">
-                         <h4 class="card-title">Friends</h4>
-                      </div>
-                   </div>
-                   <div class="card-body">
-                      <ul class="list-inline m-0 p-0">
-                         <li class="d-flex mb-4 align-items-center">
-                            <img src="https://templates.iqonic.design/muzik/html/assets/images/dashboard/55.png" alt="story-img" class="rounded-pill avatar-40" loading="lazy">
-                            <div class="ms-3 flex-grow-1">
-                               <h6>Paul Molive</h6>
-                               <p class="mb-0">Web Designer</p>
+                    <div class="card-header d-flex justify-content-between">
+                        <div class="header-title">
+                            <h4 class="card-title"> Edit Profile</h4>
+                        </div>
+                    </div>
+                    <div class="card-body">
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi vulputate, ex ac venenatis mollis, diam nibh finibus leo</p>
+                        <form>
+                            <div class="row">
+                                <div class="col-md-6 mb-3">
+                                    <label class="form-label" for="validationDefault01">Name</label>
+                                    <input type="text" class="form-control" id="validationDefault01" required="">
+                                </div>
+                                <div class="col-md-6 mb-3">
+                                    <label for="validationCustomUsername" class="form-label">Email</label>
+                                    <div class="form-group input-group">
+                                        <span class="input-group-text" id="basic-addon1">@</span>
+                                        <input type="email" class="form-control" id="validationCustomUsername" aria-label="Email" aria-describedby="basic-addon1" required="">
+                                    </div>
+                                </div>
+                                <div class="col-md-6 mb-3">
+                                    <label for="validationCustomUsername" class="form-label">Artist Name</label>
+                                    <div class="form-group input-group">
+                                        <span class="input-group-text" id="basic-addon1">@</span>
+                                        <input type="text" class="form-control" id="validationCustomUsername" aria-label="Username" aria-describedby="basic-addon1" required="">
+                                    </div>
+                                </div>
+                                <div class="col-md-6 mb-3">
+                                    <label class="form-label" for="validationDefault03">Phone</label>
+                                    <input type="text" class="form-control" id="validationDefault03" required="">
+                                </div>
+                                <div class="col-md-6 mb-3">
+                                    <label class="form-label" for="validationDefault04">Gender</label>
+                                    <select class="form-select" id="validationDefault04" required="">
+                                        <option selected="" disabled="" value="">Choose...</option>
+                                        <option>...</option>
+                                    </select>
+                                </div>
+                                <div class="col-md-6 mb-3">
+                                    <label class="form-label" for="validationDefault05">Date of Birth</label>
+                                    <input type="text" class="form-control" id="validationDefault05" required="">
+                                </div>
                             </div>
-                            <div class="dropdown">
-                               <span class="dropdown-toggle" id="dropdownMenuButton9" data-bs-toggle="dropdown" aria-expanded="false" role="button">
-                               </span>
-                               <div class="dropdown-menu dropdown-menu-end" aria-labelledby="dropdownMenuButton9">
-                                  <a class="dropdown-item " href="javascript:void(0);">Unfollow</a>
-                                  <a class="dropdown-item " href="javascript:void(0);">Unfriend</a>
-                                  <a class="dropdown-item " href="javascript:void(0);">block</a>
-                               </div>
+                            <div>
+                                <button class="btn btn-primary" type="submit">Save Changes</button>
                             </div>
-                         </li>
-                      </ul>
-                   </div>
+                        </form>
+                    </div>
                 </div>
              </div>
           </div>
