@@ -23,6 +23,8 @@ class User extends Authenticatable
         'password',
         'role',
         'gender',
+        'phone',
+        'address',
         'dob',
     ];
 
@@ -57,6 +59,15 @@ class User extends Authenticatable
     public function role(): string
     {
         return $this->role; // Assuming 'role' is a column in your users table
+    }
+    
+    public function getPictureAttribute(){
+        // Check if the user has an associated artist and an image
+        if($this->artist && $this->artist->image != null){
+            return asset('backend/avater/'.$this->artist->image);
+        } else {
+            return asset('backend/avatar/user.jpg');
+        }
     }
     
 }
