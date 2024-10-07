@@ -119,7 +119,7 @@
                             <ul class="sub-nav collapse" id="home-menu" data-bs-parent="#sidebar-menu">
                                 <li class="nav-item">
                                     <a class="nav-link active"
-                                        href="index-2.html">
+                                        href="{{ route('dashboard.home') }}">
                                         <i class="icon">
                                             <svg class="icon-10" width="10" viewBox="0 0 24 24" fill="currentColor"
                                                 xmlns="http://www.w3.org/2000/svg">
@@ -1593,7 +1593,7 @@
                                <ul class="iq-nav-menu list-unstyled">
                                   <li class="nav-item">
                                      <a class="nav-link active" aria-current="page"
-                                        href="index-2.html">
+                                        href="{{ route('dashboard.home') }}">
                                         <span class="item-name">Home</span>
                                      </a>
                                   </li>
@@ -1746,9 +1746,8 @@
                             <li class="nav-item dropdown">
                                <a class="p-0 ps-3 nav-link d-flex align-items-center position-relative" href="#" id="profile-setting" role="button"
                                   data-bs-toggle="dropdown" aria-expanded="false">
-                                  <img src="https://templates.iqonic.design/muzik/html/assets/images/dashboard/64.jpg" alt="User-Profile"
-                                     class="theme-color-default-img img-fluid avatar avatar-40 avatar-rounded" loading="lazy">
-                                     <div class="iq-profile-badge  bg-success"></div
+                                  <img src="{{ auth()->user()->picture }}" alt="User-Profile" class="theme-color-default-img img-fluid avatar avatar-40 avatar-rounded" loading="lazy">
+                                  <div class="iq-profile-badge  bg-success"></div
                                </a>
                                <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="profile-setting">
                                   <li><a class="dropdown-item" href="{{ url('/dashboard/profile') }}">Profile</a></li>
@@ -1997,7 +1996,8 @@
                 </div>
             </div>
         </footer>
-        <!-- Footer Section End -->        <!--Footer End-->
+        <!-- Footer Section End -->        
+        <!--Footer End-->
 
         <!--Burger Menu Start-->
         <div class="iq-float-menu">
@@ -2080,9 +2080,10 @@
                     </svg>
                 </span>
             </span>
-        </div>        <!--Burger Menu End-->
+        </div>        
+        <!--Burger Menu End-->
 
-          <!-- Wrapper End-->
+        <!-- Wrapper End-->
   
         <!-- Library Bundle Script -->
         <script src="https://templates.iqonic.design/muzik/html/assets/js/core/libs.min.js"></script>
