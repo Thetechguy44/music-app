@@ -6,7 +6,7 @@
                    <div class="d-flex flex-wrap align-items-center justify-content-between">
                         <div class="d-flex flex-wrap align-items-center">
                             <div class="profile-img position-relative me-3 mb-3 mb-lg-0 profile-logo profile-logo1">
-                                <img src="https://templates.iqonic.design/muzik/html/assets/images/dashboard/64.jpg" alt="User-Profile" class="theme-color-default-img img-fluid rounded-pill avatar-100" loading="lazy">
+                                <img src="{{ auth()->user()->picture }}" alt="User-Profile" class="theme-color-default-img img-fluid rounded-pill avatar-100" loading="lazy">
                             </div>
                             <div class="d-flex flex-wrap align-items-center mb-3 mb-sm-0">
                                 <h4 class="me-2 h4">{{$name}}</h4>
@@ -120,6 +120,16 @@
                                     </div>
                                 </div>
                                 <div class="col-md-6 mb-3">
+                                    <label class="form-label" for="validationDefault03">Phone</label>
+                                    <input type="text" class="form-control" id="validationDefault03" wire:model="phone">
+                                    @error('phone')
+                                        <span class="alert text-danger" role="alert">
+                                            <strong>{{ $message }}</strong>
+                                        </span>
+                                    @enderror
+                                </div>
+                                @if(auth()->user()->role === "artist")
+                                <div class="col-md-6 mb-3">
                                     <label for="validationCustomUsername" class="form-label">Artist Name</label>
                                     <div class="form-group input-group">
                                         <span class="input-group-text" id="basic-addon1">@</span>
@@ -131,15 +141,6 @@
                                         @enderror
                                     </div>
                                 </div>
-                                <div class="col-md-6 mb-3">
-                                    <label class="form-label" for="validationDefault03">Phone</label>
-                                    <input type="text" class="form-control" id="validationDefault03" wire:model="phone">
-                                    @error('phone')
-                                        <span class="alert text-danger" role="alert">
-                                            <strong>{{ $message }}</strong>
-                                        </span>
-                                    @enderror
-                                </div>
                                 <div class="col-md-12 mb-3">
                                     <label for="validationTextarea" class="form-label">Bio</label>
                                     <textarea class="form-control" id="validationTextarea" placeholder="Write a short bio about yourself" wire:model="bio">{{$bio}}</textarea>
@@ -148,7 +149,8 @@
                                             {{ $message }}
                                         </div>
                                     @enderror
-                                 </div>
+                                </div>
+                                @endif
                                 <div class="col-md-6 mb-3">
                                     <label class="form-label" for="validationDefault04">Gender</label>
                                     <select class="form-select" id="validationDefault04" wire:model="selectedGender">
