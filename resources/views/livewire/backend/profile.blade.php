@@ -10,7 +10,7 @@
                             </div>
                             <div class="d-flex flex-wrap align-items-center mb-3 mb-sm-0">
                                 <h4 class="me-2 h4">{{$name}}</h4>
-                                <span> {{$artist_name}}</span>
+                                <span> - {{$artist_name}}</span>
                             </div>
                         </div>
                         <ul class="d-flex nav nav-pills mb-0 text-center profile-tab nav-slider" data-toggle="slider-tab" id="profile-pills-tab" role="tablist">
@@ -168,7 +168,16 @@
                                 <div class="col-md-6 mb-3">
                                     <label class="form-label" for="validationDefault05">Date of Birth</label>
                                     <input type="date" class="form-control" id="validationDefault05" wire:model="dob">
-                                    @error('selectedGender')
+                                    @error('dob')
+                                        <span class="alert text-danger" role="alert">
+                                            <strong>{{ $message }}</strong>
+                                        </span>
+                                    @enderror
+                                </div>
+                                <div class="col-md-12 mb-3">
+                                    <label class="form-label" for="validationDefault05">Address</label>
+                                    <input type="text" class="form-control" id="validationDefault05" wire:model="address">
+                                    @error('address')
                                         <span class="alert text-danger" role="alert">
                                             <strong>{{ $message }}</strong>
                                         </span>
